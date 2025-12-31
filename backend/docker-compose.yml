@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  api:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - CORS_ORIGIN=http://localhost:3001
+    command: npm start
