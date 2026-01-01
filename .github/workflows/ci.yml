@@ -15,12 +15,12 @@ jobs:
         with:
           node-version: 18
       - name: Install frontend deps
-        run: npm ci
+        run: npm install
       - name: Build frontend
         run: npm run build
       - name: Install backend deps
         working-directory: backend
-        run: npm ci
+        run: npm install
       - name: Backend lint placeholder
         working-directory: backend
         run: npm test || true
